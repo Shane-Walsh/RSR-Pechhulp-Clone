@@ -14,6 +14,7 @@
 		B2375933217687230072B6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2375931217687230072B6FB /* LaunchScreen.storyboard */; };
 		B237593E217687230072B6FB /* RSR_Pechhulp_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237593D217687230072B6FB /* RSR_Pechhulp_CloneTests.swift */; };
 		B2375949217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */; };
+		B298F1C62177C99100FDB441 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298F1C52177C99100FDB441 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B2375944217687240072B6FB /* RSR-Pechhulp-CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSR-Pechhulp-CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSR_Pechhulp_CloneUITests.swift; sourceTree = "<group>"; };
 		B237594A217687240072B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B298F1C52177C99100FDB441 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		B2375927217687230072B6FB /* RSR-Pechhulp-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				B298F1C72177C9A300FDB441 /* View Controllers */,
 				B2375928217687230072B6FB /* AppDelegate.swift */,
 				B237592A217687230072B6FB /* ViewController.swift */,
 				B237592C217687230072B6FB /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				B237594A217687240072B6FB /* Info.plist */,
 			);
 			path = "RSR-Pechhulp-CloneUITests";
+			sourceTree = "<group>";
+		};
+		B298F1C72177C9A300FDB441 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B298F1C52177C99100FDB441 /* MapViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B237592B217687230072B6FB /* ViewController.swift in Sources */,
+				B298F1C62177C99100FDB441 /* MapViewController.swift in Sources */,
 				B2375929217687230072B6FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
