@@ -1,0 +1,69 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "ic_over_normal.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "ic_over_normal@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "ic_over_ipad@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "ic_over~ipad.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "ic_over@2x~ipad.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "ic_over_pressed.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "ic_over_pressed@2x.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "ic_over_normal@3x.png",
+      "unassigned" : true,
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "ic_over_pressed@3x.png",
+      "unassigned" : true,
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
