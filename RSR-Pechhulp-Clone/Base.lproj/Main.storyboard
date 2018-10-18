@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="984.79999999999995" y="-602.24887556221893"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="bYM-H6-hwO">
             <objects>
-                <viewController id="OWV-Av-9K2" sceneMemberID="viewController">
+                <viewController id="OWV-Av-9K2" customClass="MapViewController" customModule="RSR_Pechhulp_Clone" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9IZ-ww-0jb" customClass="MapViewContoller" customModule="RSR-Pechhulp-Clone">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,13 +136,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elU-i3-rPl">
-                                <rect key="frame" x="54" y="87" width="267" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
-                                <color key="textColor" red="1" green="0.28778496272050547" blue="0.13285672622291134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8w-qa-W51">
                                 <rect key="frame" x="10" y="36" width="59" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
