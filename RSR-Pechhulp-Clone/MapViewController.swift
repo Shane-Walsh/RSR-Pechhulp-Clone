@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Start here ***************
+        
 
         // Do any additional setup after loading the view.
     }
@@ -33,3 +40,5 @@ class MapViewController: UIViewController {
     */
 
 }
+
+

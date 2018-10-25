@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RSR_Pechhulp_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="RSR_Pechhulp_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,10 +30,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbJ-vv-cdf">
-                                <rect key="frame" x="183" y="424" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-pO-kHa">
                                 <rect key="frame" x="16" y="556" width="343" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -42,9 +38,10 @@
                                 <inset key="imageEdgeInsets" minX="-49" minY="0.0" maxX="0.0" maxY="2"/>
                                 <state key="normal" title="RSR Pechhulp" image="attention" backgroundImage="btn_bell">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OWV-Av-9K2" kind="show" id="LjR-r3-kyg"/>
+                                    <segue destination="OWV-Av-9K2" kind="show" id="n3C-4c-KpL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSR Revalidatieservice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2U-XE-tzN">
@@ -59,22 +56,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="info"/>
                                 <connections>
-                                    <segue destination="gl7-kq-7yf" kind="show" id="33Y-yV-d6A"/>
+                                    <segue destination="gl7-kq-7yf" kind="show" id="XJi-cQ-Q0j"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MapView" destination="Qv4-r4-E75" id="cLn-5H-MLi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
-        <!--Title-->
+        <!--Info-->
         <scene sceneID="Vd3-9o-cGy">
             <objects>
-                <viewController id="gl7-kq-7yf" sceneMemberID="viewController">
+                <viewController title="Info" id="gl7-kq-7yf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DqN-vN-J0Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
                                 <size key="titleShadowOffset" width="5" height="5"/>
                                 <state key="normal" image="terug"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="6RM-Ws-uGy"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Gme-zx-xWH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,12 +122,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rba-mh-OOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.79999999999995" y="-602.24887556221893"/>
+            <point key="canvasLocation" x="118" y="867"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="bYM-H6-hwO">
             <objects>
-                <viewController id="OWV-Av-9K2" customClass="MapViewController" customModule="RSR_Pechhulp_Clone" sceneMemberID="viewController">
+                <viewController title="Map" id="OWV-Av-9K2" customClass="MapViewController" customModule="RSR_Pechhulp_Clone" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9IZ-ww-0jb" customClass="MapViewContoller" customModule="RSR-Pechhulp-Clone">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,16 +136,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8w-qa-W51">
-                                <rect key="frame" x="10" y="36" width="59" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <size key="titleShadowOffset" width="5" height="5"/>
-                                <state key="normal" image="terug"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Fg2-FF-uCD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSR Pechhulp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uB-dv-qdp">
                                 <rect key="frame" x="105" y="36" width="165" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -153,6 +143,30 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qv4-r4-E75">
+                                <rect key="frame" x="0.0" y="79" width="375" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-Gj-r2y">
+                                <rect key="frame" x="16" y="559" width="343" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <inset key="titleEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-89" minY="0.0" maxX="0.0" maxY="2"/>
+                                <state key="normal" title="Bel RSR nu" image="phone" backgroundImage="btn_bell">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhs-gR-alS">
+                                <rect key="frame" x="9" y="36" width="59" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <state key="normal" image="terug"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="MNq-jA-LYg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="CBJ-Lb-Q2n"/>
@@ -160,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mU7-Tv-tmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.60000000000002" y="117.39130434782609"/>
+            <point key="canvasLocation" x="844" y="116.49175412293854"/>
         </scene>
     </scenes>
     <resources>
@@ -170,9 +184,10 @@
         <image name="info" width="30" height="30"/>
         <image name="nav_bar" width="320" height="64"/>
         <image name="over_img" width="320" height="216"/>
+        <image name="phone" width="32" height="36"/>
         <image name="terug" width="54" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fg2-FF-uCD"/>
+        <segue reference="Gme-zx-xWH"/>
     </inferredMetricsTieBreakers>
 </document>
