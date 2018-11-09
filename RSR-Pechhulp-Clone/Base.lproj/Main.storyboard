@@ -146,6 +146,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qv4-r4-E75">
                                 <rect key="frame" x="0.0" y="79" width="375" height="588"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OWV-Av-9K2" id="Gu3-dY-zxl"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-Gj-r2y">
                                 <rect key="frame" x="16" y="559" width="343" height="62"/>
@@ -171,6 +174,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="CBJ-Lb-Q2n"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Qv4-r4-E75" id="4wo-lU-xnI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mU7-Tv-tmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +194,6 @@
         <image name="terug" width="54" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gme-zx-xWH"/>
+        <segue reference="MNq-jA-LYg"/>
     </inferredMetricsTieBreakers>
 </document>

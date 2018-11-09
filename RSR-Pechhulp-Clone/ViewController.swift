@@ -7,25 +7,16 @@
 //
 
 import UIKit
-import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController {
    
-    @IBOutlet weak var MapView: MKMapView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // set status bar color to white
         UIApplication.shared.statusBarStyle = .lightContent
-
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
+
 
