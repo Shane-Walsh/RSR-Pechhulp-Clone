@@ -159,6 +159,9 @@
                                 <state key="normal" title="Bel RSR nu" image="phone" backgroundImage="btn_bell">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="callNowButtonWithButton:" destination="OWV-Av-9K2" eventType="touchUpInside" id="Abl-I6-QT8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhs-gR-alS">
                                 <rect key="frame" x="9" y="36" width="59" height="27"/>
@@ -170,11 +173,31 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="MNq-jA-LYg"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJE-7N-W8w">
+                                <rect key="frame" x="16" y="253" width="343" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popup" translatesAutoresizingMaskIntoConstraints="NO" id="09U-cw-hpT">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="184"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Belkosten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhN-ht-5cJ">
+                                        <rect key="frame" x="117" y="47" width="109" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="CBJ-Lb-Q2n"/>
                     </view>
                     <connections>
+                        <outlet property="callNowButton" destination="hY5-Gj-r2y" id="abr-hM-3KU"/>
+                        <outlet property="callNowView" destination="jJE-7N-W8w" id="oyu-g5-pdC"/>
                         <outlet property="mapView" destination="Qv4-r4-E75" id="4wo-lU-xnI"/>
                     </connections>
                 </viewController>
@@ -191,6 +214,7 @@
         <image name="nav_bar" width="320" height="64"/>
         <image name="over_img" width="320" height="216"/>
         <image name="phone" width="32" height="36"/>
+        <image name="popup" width="284" height="184"/>
         <image name="terug" width="54" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>

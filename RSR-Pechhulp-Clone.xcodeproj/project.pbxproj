@@ -15,6 +15,7 @@
 		B2375933217687230072B6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2375931217687230072B6FB /* LaunchScreen.storyboard */; };
 		B237593E217687230072B6FB /* RSR_Pechhulp_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237593D217687230072B6FB /* RSR_Pechhulp_CloneTests.swift */; };
 		B2375949217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */; };
+		B260E0D1219F88AD0004525A /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B260E0D0219F88AD0004525A /* CustomCalloutView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B2375944217687240072B6FB /* RSR-Pechhulp-CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSR-Pechhulp-CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSR_Pechhulp_CloneUITests.swift; sourceTree = "<group>"; };
 		B237594A217687240072B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B260E0D0219F88AD0004525A /* CustomCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B237592F217687230072B6FB /* Assets.xcassets */,
 				B2375931217687230072B6FB /* LaunchScreen.storyboard */,
 				B2375934217687230072B6FB /* Info.plist */,
+				B260E0D0219F88AD0004525A /* CustomCalloutView.xib */,
 			);
 			path = "RSR-Pechhulp-Clone";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B260E0D1219F88AD0004525A /* CustomCalloutView.xib in Resources */,
 				B2375933217687230072B6FB /* LaunchScreen.storyboard in Resources */,
 				B2375930217687230072B6FB /* Assets.xcassets in Resources */,
 				B237592E217687230072B6FB /* Main.storyboard in Resources */,
