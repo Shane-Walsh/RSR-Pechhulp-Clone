@@ -20,28 +20,30 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var callNowButton: UIButton!
     
-    let locationManager = CLLocationManager()
+    @IBOutlet weak var cancelButton: UIButton!
     
-    let newPin = MKPointAnnotation()
+    @IBOutlet weak var callNumberButton: UIButton!
+    
+    let locationManager = CLLocationManager()        // Create location manager
+    
+    let newPin = MKPointAnnotation()                // Create marker annotation
+    
+    let phoneNumber = "TEL://+31880016700"          // Set phone number for RSR
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Implement locationManager delegate protocol
-        locationManager.delegate = self
+        locationManager.delegate = self         // Implement locationManager delegate protocol
         
-        //Implement mapView delegate protocol
-        mapView.delegate = self
+        mapView.delegate = self                // Implement mapView delegate protocol
         
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest       // Set location accuracy
         
-        // Ask permission to access user location
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()      // Ask permission to access user location
         
-        // Request current location
-        locationManager.requestLocation()
+        locationManager.requestLocation()                   // Request current location
         
-        callNowView.isHidden = true
+        callNowView.isHidden = true                        // Hide Call Now panel
         
     }
     
@@ -49,7 +51,19 @@ class MapViewController: UIViewController {
     @IBAction func callNowButton(button: UIButton) {
     
         callNowView.isHidden = false
-        print("Button Pressed")
+        mapView.isHidden = true
+    }
+    
+    @IBAction func cancelButton(button: UIButton) {
+        
+        mapView.isHidden = false
+        callNowView.isHidden = true
+    }
+    
+    @IBAction func callPhoneNumber(button: UIButton) {
+        
+        let url: NSURL = URL(string: phoneNumber)! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
 }
 

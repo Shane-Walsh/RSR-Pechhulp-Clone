@@ -174,22 +174,59 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJE-7N-W8w">
-                                <rect key="frame" x="16" y="253" width="343" height="184"/>
+                                <rect key="frame" x="16" y="224" width="343" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popup" translatesAutoresizingMaskIntoConstraints="NO" id="09U-cw-hpT">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="184"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="annuleren" translatesAutoresizingMaskIntoConstraints="NO" id="maP-MG-AC6">
+                                        <rect key="frame" x="0.0" y="14" width="89" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Belkosten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhN-ht-5cJ">
-                                        <rect key="frame" x="117" y="47" width="109" height="26"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popup" translatesAutoresizingMaskIntoConstraints="NO" id="09U-cw-hpT">
+                                        <rect key="frame" x="0.0" y="36" width="343" height="203"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WEH-Nq-cOh">
+                                        <rect key="frame" x="40" y="90" width="263" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">Voor dit nummer betaalt uw
+gebruikelijke belkosten</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Belkosten" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNs-7Y-ap6">
+                                        <rect key="frame" x="99" y="51" width="145" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-ey-LKh">
+                                        <rect key="frame" x="0.0" y="14" width="89" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Annuleren">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonWithButton:" destination="OWV-Av-9K2" eventType="touchUpInside" id="Efa-fM-uIf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBF-h7-QeP">
+                                        <rect key="frame" x="22" y="161" width="297" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-130" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Bel nu" image="call" backgroundImage="btn_bell">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callPhoneNumberWithButton:" destination="OWV-Av-9K2" eventType="touchUpInside" id="41M-NT-5wK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -198,6 +235,8 @@
                     <connections>
                         <outlet property="callNowButton" destination="hY5-Gj-r2y" id="abr-hM-3KU"/>
                         <outlet property="callNowView" destination="jJE-7N-W8w" id="oyu-g5-pdC"/>
+                        <outlet property="callNumberButton" destination="OBF-h7-QeP" id="gXS-3Q-WeB"/>
+                        <outlet property="cancelButton" destination="ogO-ey-LKh" id="Tc4-7Z-Oj1"/>
                         <outlet property="mapView" destination="Qv4-r4-E75" id="4wo-lU-xnI"/>
                     </connections>
                 </viewController>
@@ -207,9 +246,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="annuleren" width="106" height="26"/>
         <image name="attention" width="42" height="36"/>
         <image name="background" width="320" height="504"/>
         <image name="btn_bell" width="216" height="48"/>
+        <image name="call" width="30" height="36"/>
         <image name="info" width="30" height="30"/>
         <image name="nav_bar" width="320" height="64"/>
         <image name="over_img" width="320" height="216"/>
