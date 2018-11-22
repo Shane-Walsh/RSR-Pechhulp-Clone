@@ -16,7 +16,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var callNowView: UIView!
     
-
+    @IBOutlet weak var customCallout: UIView!
     
     @IBOutlet weak var callNowButton: UIButton!
     
@@ -26,7 +26,7 @@ class MapViewController: UIViewController {
     
     let locationManager = CLLocationManager()        // Create location manager
     
-    let newPin = MKPointAnnotation()                // Create marker annotation
+    let mapMarker = MKPointAnnotation()                // Create annotation
     
     let phoneNumber = "TEL://+31880016700"          // Set phone number for RSR
     
@@ -41,17 +41,21 @@ class MapViewController: UIViewController {
         
         locationManager.requestWhenInUseAuthorization()      // Ask permission to access user location
         
-        locationManager.requestLocation()                   // Request current location
+        locationManager.requestLocation()                    // Request current location
         
-        callNowView.isHidden = true                        // Hide Call Now panel
+        
+     //MARK: Initialise Views
+        
+        callNowView.isHidden = true                          // Hide Call Now panel
+        customCallout.isHidden = true
         
     }
     
     //MARK: Button Action
     @IBAction func callNowButton(button: UIButton) {
     
-        callNowView.isHidden = false            // Shows call now panel on button tap
-        mapView.isHidden = true                 // Hides map behind call now panel
+        callNowView.isHidden = false                        // Shows call now panel on button tap
+        mapView.isHidden = true                             // Hides map behind call now panel
     }
     
     @IBAction func cancelButton(button: UIButton) {
@@ -81,7 +85,7 @@ extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       
-        mapView.removeAnnotation(newPin)
+        mapView.removeAnnotation(mapMarker)
         
         if let location = locations.first {
             
@@ -91,50 +95,36 @@ extension MapViewController: CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.setRegion(region, animated: true)
      
-            newPin.title = "Uw locatie"
-            newPin.coordinate = location.coordinate
-            mapView.addAnnotation(newPin)
+            mapMarker.title = "Uw locatie"
+            mapMarker.coordinate = location.coordinate
+            mapView.addAnnotation(mapMarker)
         }
-        
     }
 }
 
 extension MapViewController: MKMapViewDelegate {
-    //http://swiftdeveloperblog.com/code-examples/mkannotationview-display-custom-pin-image/
+   
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
-    {   // Check if point annotation else let the map view use its default annotation view.
-        if !(annotation is MKPointAnnotation) {
-            return nil
-        }
-        // To identify annotation in the queue
-        let annotationIdentifier = "AnnotationIdentifier"
+    {
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationIdentifier")
         
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
+        annotationView.image = UIImage(named: "marker")
         
-        // If none in queue, create new annotation
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            
-            //annotationView!.isEnabled = true
-            annotationView!.image = UIImage(named: "marker")
-            annotationView!.canShowCallout = false
-        }
-        else {
-            annotationView!.annotation = annotation
-        }
-        /*
-         let customView = (Bundle.main.loadNibNamed("CustomCalloutView", owner: self, options: nil))?[0] as! CustomCalloutView
-         view.addSubview(customView)
-         */
+        customCallout.isHidden = false          // Show annotation
+        
+        // Frame callout above annotation
+        customCallout.frame = CGRect(x: -(customCallout.frame.width  / 2), y: -(customCallout.frame.height), width: customCallout.frame.width, height: customCallout.frame.height)
+        
+        annotationView.addSubview(customCallout)
         
         return annotationView
     }
     // Show callout automatically
-    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        if let annotation = views.first(where: { $0.reuseIdentifier == "AnnotationIdentifier" })?.annotation {
-            mapView.selectAnnotation(annotation, animated: true)
-        }
-    }
+   // func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+   //     if let annotation = views.first(where: { $0.reuseIdentifier == "AnnotationIdentifier" })?.annotation {
+   //         mapView.selectAnnotation(annotation, animated: true)
+   //     }
+   // }
 }
 //https://digitalleaves.com/blog/2016/12/building-the-perfect-ios-map-ii-completely-custom-annotation-views
 //addSubview(UIImageView(image: UIImage(named: "car")))
@@ -167,3 +157,4 @@ extension MapViewController: MKMapViewDelegate {
 // https://makeapppie.com/2018/02/20/use-markers-instead-of-pins-for-map-annotations/
 // ------ UI View --------
 // https://medium.com/@ludovicjamet/how-to-use-storyboard-to-create-and-preview-custom-views-92acad7405fa
+// http://swiftdeveloperblog.com/code-examples/mkannotationview-display-custom-pin-image/
