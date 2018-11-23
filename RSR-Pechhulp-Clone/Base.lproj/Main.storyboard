@@ -114,20 +114,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_bar" translatesAutoresizingMaskIntoConstraints="NO" id="SIL-69-SLa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nav_bar" translatesAutoresizingMaskIntoConstraints="NO" id="SIL-69-SLa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="346"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="346" id="zV8-ZS-Uc4"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Over RSR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT5-zG-rGw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Over RSR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT5-zG-rGw">
                                 <rect key="frame" x="128" y="36" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="over_img" translatesAutoresizingMaskIntoConstraints="NO" id="UAM-te-hDa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="over_img" translatesAutoresizingMaskIntoConstraints="NO" id="UAM-te-hDa">
                                 <rect key="frame" x="0.0" y="74" width="375" height="261"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDI-dc-iyc">
                                 <rect key="frame" x="16" y="354" width="343" height="313"/>
@@ -139,8 +139,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-M7-n0B">
-                                <rect key="frame" x="16" y="33" width="59" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-M7-n0B">
+                                <rect key="frame" x="9" y="33" width="59" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="5" height="5"/>
                                 <state key="normal" image="terug"/>
@@ -150,16 +151,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="SIL-69-SLa" firstAttribute="leading" secondItem="UAM-te-hDa" secondAttribute="leading" id="OLX-Tm-00c"/>
-                            <constraint firstItem="SIL-69-SLa" firstAttribute="leading" secondItem="1vc-M7-n0B" secondAttribute="trailing" constant="-75" id="P2t-RL-TTJ"/>
-                            <constraint firstItem="SIL-69-SLa" firstAttribute="trailing" secondItem="UAM-te-hDa" secondAttribute="trailing" id="RwY-bV-YxV"/>
-                            <constraint firstItem="SIL-69-SLa" firstAttribute="top" secondItem="DqN-vN-J0Z" secondAttribute="top" id="Wpo-zo-aon"/>
-                            <constraint firstItem="SIL-69-SLa" firstAttribute="leading" secondItem="DqN-vN-J0Z" secondAttribute="leading" id="d7E-fO-YjJ"/>
-                            <constraint firstAttribute="trailing" secondItem="SIL-69-SLa" secondAttribute="trailing" id="iUB-iq-qWm"/>
-                            <constraint firstItem="GT5-zG-rGw" firstAttribute="centerX" secondItem="SIL-69-SLa" secondAttribute="centerX" id="sBs-Gm-QDu"/>
-                            <constraint firstItem="SIL-69-SLa" firstAttribute="top" secondItem="1vc-M7-n0B" secondAttribute="bottom" constant="-60" id="vCn-01-kav"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WPi-gN-0is"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="rzY-gZ-6DR"/>
@@ -182,8 +173,9 @@
                                     <constraint firstAttribute="height" constant="79" id="tcs-Eo-EDt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="RSR Pechhulp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uB-dv-qdp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSR Pechhulp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uB-dv-qdp">
                                 <rect key="frame" x="105" y="36" width="165" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -280,7 +272,30 @@ gebruikelijke belkosten</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="Blx-EZ-5nZ">
                                         <rect key="frame" x="0.0" y="0.0" width="205" height="143"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Uw locatie:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-F8-M6h">
+                                        <rect key="frame" x="54" y="12" width="97" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Onthound deze locatie voor het telefoongesprek" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CMM-TK-f1E">
+                                        <rect key="frame" x="4" y="83" width="198" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.20037665963172913" green="0.62821835279464722" blue="0.76918536424636841" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-jO-ybS">
+                                        <rect key="frame" x="28" y="32" width="149" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -294,11 +309,11 @@ gebruikelijke belkosten</string>
                             <constraint firstItem="jJE-7N-W8w" firstAttribute="leading" secondItem="9IZ-ww-0jb" secondAttribute="leadingMargin" id="jho-6e-E6X"/>
                             <constraint firstItem="JYp-nT-LFG" firstAttribute="leading" secondItem="9IZ-ww-0jb" secondAttribute="leading" id="l2D-Me-Df1"/>
                             <constraint firstItem="JYp-nT-LFG" firstAttribute="top" secondItem="9IZ-ww-0jb" secondAttribute="top" id="tZ3-13-6nq"/>
-                            <constraint firstItem="JYp-nT-LFG" firstAttribute="centerX" secondItem="7uB-dv-qdp" secondAttribute="centerX" id="xes-B7-EmR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CBJ-Lb-Q2n"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="gh5-jO-ybS" id="9Xe-Xo-IHF"/>
                         <outlet property="callNowButton" destination="hY5-Gj-r2y" id="abr-hM-3KU"/>
                         <outlet property="callNowView" destination="jJE-7N-W8w" id="oyu-g5-pdC"/>
                         <outlet property="callNumberButton" destination="OBF-h7-QeP" id="gXS-3Q-WeB"/>

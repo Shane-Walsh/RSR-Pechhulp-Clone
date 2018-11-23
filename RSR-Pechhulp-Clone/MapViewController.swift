@@ -18,44 +18,48 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var customCallout: UIView!
     
+    @IBOutlet weak var addressLabel: UILabel!
+    
     @IBOutlet weak var callNowButton: UIButton!
     
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBOutlet weak var callNumberButton: UIButton!
     
-    let locationManager = CLLocationManager()        // Create location manager
+    let locationManager = CLLocationManager()        // Access location manager API
     
-    let mapMarker = MKPointAnnotation()                // Create annotation
+    let mapMarker = MKPointAnnotation()              // Access annotation API
     
-    let phoneNumber = "TEL://+31880016700"          // Set phone number for RSR
+    let phoneNumber = "TEL://+31880016700"           // Set phone number for RSR
+    
+    static let geoCoder = CLGeocoder()               // Needed to convert coordinates into placenames
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.delegate = self                // Implement mapView delegate protocol
+        mapView.delegate = self                                         // Implement mapView delegate protocol
         
-        locationManager.delegate = self         // Implement locationManager delegate protocol
+        locationManager.delegate = self                                 // Implement locationManager delegate protocol
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest       // Set location accuracy
         
-        locationManager.requestWhenInUseAuthorization()      // Ask permission to access user location
+        locationManager.requestWhenInUseAuthorization()                 // Ask permission to access user location
         
-        locationManager.requestLocation()                    // Request current location
+        locationManager.requestLocation()                               // Request current user location
         
         
      //MARK: Initialise Views
         
-        callNowView.isHidden = true                          // Hide Call Now panel
-        customCallout.isHidden = true
+        callNowView.isHidden = true                                     // Hide CallNow panel
+        customCallout.isHidden = true                                   // Hide CallOut bubble
         
     }
     
     //MARK: Button Action
     @IBAction func callNowButton(button: UIButton) {
     
-        callNowView.isHidden = false                        // Shows call now panel on button tap
-        mapView.isHidden = true                             // Hides map behind call now panel
+        callNowView.isHidden = false                                    // Shows callNow panel on button tap
+        mapView.isHidden = true                                         // Hides map behind callNow panel
     }
     
     @IBAction func cancelButton(button: UIButton) {
@@ -69,14 +73,53 @@ class MapViewController: UIViewController {
         let url: NSURL = URL(string: phoneNumber)! as NSURL
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
+    
+    
+    // Display user address in callout bubble
+    func displayAddress(with location: CLLocation){
+        
+        // Get user location corrdinates
+        let address = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        
+        
+        // Convert coordinates to placemarks ie. address
+        MapViewController.geoCoder.reverseGeocodeLocation(address) {
+            (placemarks, error) -> Void in
+            if let placemarks = placemarks, placemarks.count > 0 {
+                let placemark = placemarks[0]
+                
+                var addressString : String = ""
+                
+                // First check if placemarks exist
+                if placemark.thoroughfare != nil {
+                    addressString = addressString + placemark.thoroughfare! + ", "
+                }
+                if placemark.subThoroughfare != nil {
+                    addressString = addressString + placemark.subThoroughfare! + "\n"
+                }
+                if placemark.postalCode != nil {
+                    addressString = addressString + placemark.postalCode! + ", "
+                }
+                if placemark.locality != nil {
+                    addressString = addressString + placemark.locality!
+                }
+
+               self.addressLabel.text = String(addressString)
+            }
+        }
+     
+    
+    }
 }
 
+//MARK: Location Services
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error.localizedDescription)")
     }
     
+    // Ask user to allow access to location data
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
@@ -95,13 +138,14 @@ extension MapViewController: CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.setRegion(region, animated: true)
      
-            mapMarker.title = "Uw locatie"
             mapMarker.coordinate = location.coordinate
             mapView.addAnnotation(mapMarker)
+            self.displayAddress(with: location)
         }
     }
 }
 
+//MARK: MapView Delegate 
 extension MapViewController: MKMapViewDelegate {
    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
@@ -112,19 +156,13 @@ extension MapViewController: MKMapViewDelegate {
         
         customCallout.isHidden = false          // Show annotation
         
-        // Frame callout above annotation
+        // Frame callout bubble above annotation
         customCallout.frame = CGRect(x: -(customCallout.frame.width  / 2), y: -(customCallout.frame.height), width: customCallout.frame.width, height: customCallout.frame.height)
         
         annotationView.addSubview(customCallout)
         
         return annotationView
     }
-    // Show callout automatically
-   // func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-   //     if let annotation = views.first(where: { $0.reuseIdentifier == "AnnotationIdentifier" })?.annotation {
-   //         mapView.selectAnnotation(annotation, animated: true)
-   //     }
-   // }
 }
 //https://digitalleaves.com/blog/2016/12/building-the-perfect-ios-map-ii-completely-custom-annotation-views
 //addSubview(UIImageView(image: UIImage(named: "car")))
