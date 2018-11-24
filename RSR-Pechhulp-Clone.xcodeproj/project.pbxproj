@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21B4C4121A8CA4100FF34F4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B4C4021A8CA4100FF34F4 /* Reachability.swift */; };
 		B23429162178E70900FB40C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23429152178E70900FB40C4 /* MapViewController.swift */; };
 		B2375929217687230072B6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2375928217687230072B6FB /* AppDelegate.swift */; };
 		B237592B217687230072B6FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237592A217687230072B6FB /* ViewController.swift */; };
@@ -15,8 +16,6 @@
 		B2375933217687230072B6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2375931217687230072B6FB /* LaunchScreen.storyboard */; };
 		B237593E217687230072B6FB /* RSR_Pechhulp_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237593D217687230072B6FB /* RSR_Pechhulp_CloneTests.swift */; };
 		B2375949217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */; };
-		B2D8E5EC21A3556C00E2EEE6 /* customCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2D8E5EB21A3556C00E2EEE6 /* customCalloutView.xib */; };
-		B2D8E5EE21A37C8500E2EEE6 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D8E5ED21A37C8500E2EEE6 /* CustomCalloutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B21B4C4021A8CA4100FF34F4 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B23429152178E70900FB40C4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B2375925217687230072B6FB /* RSR-Pechhulp-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSR-Pechhulp-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2375928217687230072B6FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +51,6 @@
 		B2375944217687240072B6FB /* RSR-Pechhulp-CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSR-Pechhulp-CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSR_Pechhulp_CloneUITests.swift; sourceTree = "<group>"; };
 		B237594A217687240072B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2D8E5EB21A3556C00E2EEE6 /* customCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customCalloutView.xib; sourceTree = "<group>"; };
-		B2D8E5ED21A37C8500E2EEE6 /* CustomCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +101,7 @@
 		B2375927217687230072B6FB /* RSR-Pechhulp-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				B21B4C4021A8CA4100FF34F4 /* Reachability.swift */,
 				B2375928217687230072B6FB /* AppDelegate.swift */,
 				B237592A217687230072B6FB /* ViewController.swift */,
 				B237592C217687230072B6FB /* Main.storyboard */,
@@ -110,8 +109,6 @@
 				B237592F217687230072B6FB /* Assets.xcassets */,
 				B2375931217687230072B6FB /* LaunchScreen.storyboard */,
 				B2375934217687230072B6FB /* Info.plist */,
-				B2D8E5EB21A3556C00E2EEE6 /* customCalloutView.xib */,
-				B2D8E5ED21A37C8500E2EEE6 /* CustomCalloutView.swift */,
 			);
 			path = "RSR-Pechhulp-Clone";
 			sourceTree = "<group>";
@@ -241,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2D8E5EC21A3556C00E2EEE6 /* customCalloutView.xib in Resources */,
 				B2375933217687230072B6FB /* LaunchScreen.storyboard in Resources */,
 				B2375930217687230072B6FB /* Assets.xcassets in Resources */,
 				B237592E217687230072B6FB /* Main.storyboard in Resources */,
@@ -269,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2D8E5EE21A37C8500E2EEE6 /* CustomCalloutView.swift in Sources */,
+				B21B4C4121A8CA4100FF34F4 /* Reachability.swift in Sources */,
 				B237592B217687230072B6FB /* ViewController.swift in Sources */,
 				B23429162178E70900FB40C4 /* MapViewController.swift in Sources */,
 				B2375929217687230072B6FB /* AppDelegate.swift in Sources */,

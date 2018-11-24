@@ -37,6 +37,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkConnectivity()                                             // Check network connection
+        
         mapView.delegate = self                                         // Implement mapView delegate protocol
         
         locationManager.delegate = self                                 // Implement locationManager delegate protocol
@@ -45,7 +47,7 @@ class MapViewController: UIViewController {
         
         locationManager.requestWhenInUseAuthorization()                 // Ask permission to access user location
         
-        locationManager.requestLocation()                               // Request current user location
+        locationManager.startUpdatingLocation()                         // Get users current location
         
         
      //MARK: Initialise Views
@@ -107,19 +109,48 @@ class MapViewController: UIViewController {
                self.addressLabel.text = String(addressString)
             }
         }
-     
+    }
     
+    // MARK: Connectivity Check
+    
+    func checkConnectivity() {
+        
+        if !Reachability.shared.isConnectedToNetwork(){
+            
+            self.showAlert(title: "No internet connection", msg: "Make sure your device is connected to the internet", actions: nil)
+        }
+    }
+    
+    func showAlert(title: String, msg: String, actions:[UIAlertAction]?) {
+        
+        var actions = actions
+        let alertVC = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        if actions == nil {
+            actions = [UIAlertAction(title: "OK", style: .default, handler: nil)]
+        }
+        
+        for action in actions! {
+            alertVC.addAction(action)
+        }
+        
+        if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
+            rootVC.present(alertVC, animated: true, completion: nil)
+        } else {
+            print("Error: Root view controller not set.")
+        }
     }
 }
 
 //MARK: Location Services
 extension MapViewController: CLLocationManagerDelegate {
     
+    // Respond to potential errors
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error.localizedDescription)")
     }
     
-    // Ask user to allow access to location data
+    // Check whether authorized to get current location
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
@@ -128,8 +159,6 @@ extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       
-        mapView.removeAnnotation(mapMarker)
-        
         if let location = locations.first {
             
             print("location:: \(location)")
@@ -140,12 +169,14 @@ extension MapViewController: CLLocationManagerDelegate {
      
             mapMarker.coordinate = location.coordinate
             mapView.addAnnotation(mapMarker)
-            self.displayAddress(with: location)
+            
+            self.displayAddress(with: location)                // Send coordinates to displayAddress method
+            locationManager.stopUpdatingLocation()             // Stop the generation of updates (user location)
         }
     }
 }
 
-//MARK: MapView Delegate 
+//MARK: MapView Delegate
 extension MapViewController: MKMapViewDelegate {
    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
