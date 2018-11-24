@@ -37,7 +37,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkConnectivity()                                             // Check network connection
+        checkConnectivity()                                             // Check network connection & GPS
         
         mapView.delegate = self                                         // Implement mapView delegate protocol
         
@@ -50,7 +50,7 @@ class MapViewController: UIViewController {
         locationManager.startUpdatingLocation()                         // Get users current location
         
         
-     //MARK: Initialise Views
+    //MARK: Initialise Views
         
         callNowView.isHidden = true                                     // Hide CallNow panel
         customCallout.isHidden = true                                   // Hide CallOut bubble
@@ -111,16 +111,25 @@ class MapViewController: UIViewController {
         }
     }
     
+    
     // MARK: Connectivity Check
     
     func checkConnectivity() {
         
+        // Check for internet connection
         if !Reachability.shared.isConnectedToNetwork(){
             
             self.showAlert(title: "No internet connection", msg: "Make sure your device is connected to the internet", actions: nil)
         }
+        
+        // Check for GPS
+       if !CLLocationManager.locationServicesEnabled() {
+            
+            self.showAlert(title: "No GPS connection", msg: "Make sure GPS is switched on to continue", actions: nil)
+        }
     }
     
+    // Alert user
     func showAlert(title: String, msg: String, actions:[UIAlertAction]?) {
         
         var actions = actions
@@ -142,10 +151,12 @@ class MapViewController: UIViewController {
     }
 }
 
+
 //MARK: Location Services
+
 extension MapViewController: CLLocationManagerDelegate {
     
-    // Respond to potential errors
+    // Respond to potential errors regarding location services
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error.localizedDescription)")
     }
@@ -176,7 +187,9 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 }
 
+
 //MARK: MapView Delegate
+
 extension MapViewController: MKMapViewDelegate {
    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
