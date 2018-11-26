@@ -61,13 +61,13 @@ class MapViewController: UIViewController {
     @IBAction func callNowButton(button: UIButton) {
     
         callNowView.isHidden = false                                    // Shows callNow panel on button tap
-        mapView.isHidden = true                                         // Hides map behind callNow panel
+       customCallout.isHidden = true                                    // Hide callout bubble
     }
     
     @IBAction func cancelButton(button: UIButton) {
         
-        mapView.isHidden = false
-        callNowView.isHidden = true
+        customCallout.isHidden = false                                  // Callout bubble reappears if user cancels
+        callNowView.isHidden = true                                     // Hide CallNow panel
     }
     
     @IBAction func callPhoneNumber(button: UIButton) {
@@ -174,7 +174,7 @@ extension MapViewController: CLLocationManagerDelegate {
             
             print("location:: \(location)")
             
-            let span = MKCoordinateSpanMake(0.05, 0.05)
+            let span = MKCoordinateSpanMake(0.01, 0.01)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.setRegion(region, animated: true)
      
