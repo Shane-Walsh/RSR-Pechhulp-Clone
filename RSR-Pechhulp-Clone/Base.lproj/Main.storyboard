@@ -74,18 +74,19 @@
         <!--Over RSR-->
         <scene sceneID="Vd3-9o-cGy">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="gl7-kq-7yf" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="gl7-kq-7yf" customClass="OverViewController" customModule="RSR_Pechhulp_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DqN-vN-J0Z">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="over_img" translatesAutoresizingMaskIntoConstraints="NO" id="UAM-te-hDa">
-                                <rect key="frame" x="0.0" y="64" width="375" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_img" translatesAutoresizingMaskIntoConstraints="NO" id="UAM-te-hDa">
+                                <rect key="frame" x="0.0" y="64" width="768" height="524"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDI-dc-iyc">
-                                <rect key="frame" x="16" y="354" width="343" height="313"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="s7j-zj-dzA">
+                                <rect key="frame" x="0.0" y="588" width="768" height="18"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDI-dc-iyc">
+                                <rect key="frame" x="16" y="630" width="736" height="169"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Met de hulp van RSR blijft u mobiel. RSR is dé leverancier van hulpmiddelen in de regio Noordoost-Nederland. Gedegen kennis en jarenlange ervaring zit in ons DNA verweven en leidt tot het beste advies.   Wilt u mere weten over onze producten en diensten, kijk dan op www.rsr.nl of bezoek onze showrooms in Silvolde en Nieuwleusen. We zijn iedere werkdag geopend van 8.00 tot 17.00 uur. Hier kunt u diverse hulpmiddelen uitproberen en rustig bekijken wat goed bij uw situatie aansluit. Samen met u zoeken we naar hulpmiddelen dat bij u past. RSR maakt mensen mobiel.</string>
                                 <color key="textColor" red="0.48672950035202384" green="0.49185296877678197" blue="0.49185296877678197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,19 +94,36 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="s7j-zj-dzA">
-                                <rect key="frame" x="0.0" y="335" width="375" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_logo" translatesAutoresizingMaskIntoConstraints="NO" id="yeq-au-cOA">
+                                <rect key="frame" x="296" y="835" width="176" height="148"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="leading" secondItem="WPi-gN-0is" secondAttribute="leading" id="2Th-kz-Q0M"/>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="top" secondItem="WPi-gN-0is" secondAttribute="top" id="3Ob-An-tJR"/>
+                            <constraint firstItem="bDI-dc-iyc" firstAttribute="top" secondItem="s7j-zj-dzA" secondAttribute="bottom" constant="24" id="EQl-1f-FF6"/>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="width" secondItem="DqN-vN-J0Z" secondAttribute="width" id="L83-lX-HKb"/>
+                            <constraint firstItem="yeq-au-cOA" firstAttribute="centerX" secondItem="WPi-gN-0is" secondAttribute="centerX" id="NGn-OR-28F"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="top" secondItem="UAM-te-hDa" secondAttribute="bottom" id="T1D-29-SgT"/>
+                            <constraint firstItem="yeq-au-cOA" firstAttribute="top" secondItem="bDI-dc-iyc" secondAttribute="bottom" constant="36" id="TCF-B3-Vdf"/>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="trailing" secondItem="WPi-gN-0is" secondAttribute="trailing" id="b1I-2f-30Q"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="leading" secondItem="WPi-gN-0is" secondAttribute="leading" id="g6o-c0-j83"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="trailing" secondItem="WPi-gN-0is" secondAttribute="trailing" id="hkx-Bs-mSx"/>
+                            <constraint firstItem="bDI-dc-iyc" firstAttribute="leading" secondItem="WPi-gN-0is" secondAttribute="leading" constant="16" id="lAM-ti-hxU"/>
+                            <constraint firstItem="WPi-gN-0is" firstAttribute="trailing" secondItem="bDI-dc-iyc" secondAttribute="trailing" constant="16" id="wGa-or-CWl"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="width" secondItem="DqN-vN-J0Z" secondAttribute="width" id="yxo-lw-WDw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WPi-gN-0is"/>
                     </view>
                     <navigationItem key="navigationItem" title="Over RSR" id="sli-gI-3kB"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="yeq-au-cOA" id="HgL-3p-5we"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rba-mh-OOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448.8" y="622.93853073463276"/>
+            <point key="canvasLocation" x="1448.4375" y="622.8515625"/>
         </scene>
         <!--RSR Pechhulp-->
         <scene sceneID="bYM-H6-hwO">
@@ -240,10 +258,10 @@ gebruikelijke belkosten</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="srF-Dh-nRG">
                                                 <rect key="frame" x="135" y="64" width="212" height="36"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-Zf-EPb">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-Zf-EPb">
                                                         <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="088-0016700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5g-aD-BbV">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="088-0016700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5g-aD-BbV">
                                                         <rect key="frame" x="52" y="0.0" width="160" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -335,6 +353,7 @@ gebruikelijke belkosten</string>
         <image name="info" width="30" height="30"/>
         <image name="line" width="768" height="18"/>
         <image name="over_img" width="768" height="524"/>
+        <image name="over_logo" width="176" height="148"/>
         <image name="phone" width="32" height="36"/>
         <image name="popup" width="284" height="184"/>
     </resources>

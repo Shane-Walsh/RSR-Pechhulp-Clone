@@ -16,6 +16,7 @@
 		B2375933217687230072B6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2375931217687230072B6FB /* LaunchScreen.storyboard */; };
 		B237593E217687230072B6FB /* RSR_Pechhulp_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237593D217687230072B6FB /* RSR_Pechhulp_CloneTests.swift */; };
 		B2375949217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */; };
+		B279D60D21AECA7A00DB47EE /* OverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279D60C21AECA7A00DB47EE /* OverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B2375944217687240072B6FB /* RSR-Pechhulp-CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSR-Pechhulp-CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSR_Pechhulp_CloneUITests.swift; sourceTree = "<group>"; };
 		B237594A217687240072B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B279D60C21AECA7A00DB47EE /* OverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B237592F217687230072B6FB /* Assets.xcassets */,
 				B2375931217687230072B6FB /* LaunchScreen.storyboard */,
 				B2375934217687230072B6FB /* Info.plist */,
+				B279D60C21AECA7A00DB47EE /* OverViewController.swift */,
 			);
 			path = "RSR-Pechhulp-Clone";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				B21B4C4121A8CA4100FF34F4 /* Reachability.swift in Sources */,
 				B237592B217687230072B6FB /* ViewController.swift in Sources */,
 				B23429162178E70900FB40C4 /* MapViewController.swift in Sources */,
+				B279D60D21AECA7A00DB47EE /* OverViewController.swift in Sources */,
 				B2375929217687230072B6FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
