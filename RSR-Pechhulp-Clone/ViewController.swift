@@ -9,13 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
+    
+    @IBOutlet weak var infoButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set status bar color to white
+        // Set status bar color to white
         UIApplication.shared.statusBarStyle = .lightContent
         
+        
+        // If iPad hide info button on navbar
+         if UIDevice.current.userInterfaceIdiom == .pad {
+            
+            self.navigationItem.rightBarButtonItem = nil
+         }
     }
 }
 

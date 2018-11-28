@@ -26,6 +26,8 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var callNumberButton: UIButton!
     
+    @IBOutlet weak var bottomCallView: UIView!
+    
     let locationManager = CLLocationManager()        // Access location manager API
     
     let mapMarker = MKPointAnnotation()              // Access annotation API
@@ -39,6 +41,21 @@ class MapViewController: UIViewController {
         
         checkConnectivity()                                             // Check network connection & GPS
         
+        //MARK: Initialise Views
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {                // If iPad hide call now button
+            
+            callNowButton.isHidden = true
+        }
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {                // If iPad hide call now button
+            
+            bottomCallView.isHidden = true
+        }
+        
+        callNowView.isHidden = true                                     // Hide CallNow panel
+        customCallout.isHidden = true                                   // Hide CallOut bubble
+        
         mapView.delegate = self                                         // Implement mapView delegate protocol
         
         locationManager.delegate = self                                 // Implement locationManager delegate protocol
@@ -49,19 +66,13 @@ class MapViewController: UIViewController {
         
         locationManager.startUpdatingLocation()                         // Get users current location
         
-        
-    //MARK: Initialise Views
-        
-        callNowView.isHidden = true                                     // Hide CallNow panel
-        customCallout.isHidden = true                                   // Hide CallOut bubble
-        
     }
     
     //MARK: Button Action
     @IBAction func callNowButton(button: UIButton) {
     
         callNowView.isHidden = false                                    // Shows callNow panel on button tap
-       customCallout.isHidden = true                                    // Hide callout bubble
+        customCallout.isHidden = true                                    // Hide callout bubble
     }
     
     @IBAction func cancelButton(button: UIButton) {
