@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cv8-x7-SJB">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--RSR Revalidatieservice-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="ViewController" customModule="RSR_Pechhulp_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cZF-NX-JPB">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-A7-8kT">
+                                <rect key="frame" x="212.5" y="828" width="343" height="146"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-pO-kHa">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="WBX-qo-idX"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="eF7-YN-rrY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-100" minY="0.0" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="RSR Pechhulp" image="attention" backgroundImage="btn_bell">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="OWV-Av-9K2" kind="show" id="n3C-4c-KpL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-X1-vnW">
+                                        <rect key="frame" x="0.0" y="83" width="343" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="4cI-5S-EQS"/>
+                                            <constraint firstAttribute="height" constant="63" id="pPD-fI-GFQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <inset key="titleEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-145" minY="0.0" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="Over RSR" image="info" backgroundImage="btn_bell">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="gl7-kq-7yf" kind="show" id="euM-Wx-R7O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xAi-X1-vnW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="63" id="DTA-im-UZv">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
+                            </constraint>
+                            <constraint firstItem="cZF-NX-JPB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JmX-W4-XOi"/>
+                            <constraint firstItem="aO3-A7-8kT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Psb-nz-fq1"/>
+                            <constraint firstItem="cZF-NX-JPB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a54-HA-G8u"/>
+                            <constraint firstItem="cZF-NX-JPB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bjE-dL-s3l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="IHU-pO-kHa" secondAttribute="bottom" id="nFl-cc-Bw1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                            </constraint>
+                            <constraint firstItem="cZF-NX-JPB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w93-5F-Gvi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DTA-im-UZv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="DTA-im-UZv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="RSR Revalidatieservice" id="pqn-Nd-sov">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="7Xd-uk-YIf">
+                            <color key="tintColor" red="0.82255256180000003" green="0.86074656250000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="info" id="eX1-OQ-8hS">
+                            <color key="tintColor" red="0.82255256175994873" green="0.86074656248092651" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="gl7-kq-7yf" kind="show" id="pzY-DE-HlC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="MapView" destination="Qv4-r4-E75" id="cLn-5H-MLi"/>
+                        <outlet property="infoButton" destination="eX1-OQ-8hS" id="cW6-DR-yL4"/>
+                        <outlet property="overButton" destination="xAi-X1-vnW" id="8Kt-sE-dfo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Over RSR-->
+        <scene sceneID="Vd3-9o-cGy">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="gl7-kq-7yf" customClass="OverViewController" customModule="RSR_Pechhulp_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DqN-vN-J0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_img" translatesAutoresizingMaskIntoConstraints="NO" id="UAM-te-hDa">
+                                <rect key="frame" x="0.0" y="64" width="768" height="524"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="s7j-zj-dzA">
+                                <rect key="frame" x="0.0" y="588" width="768" height="18"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDI-dc-iyc">
+                                <rect key="frame" x="16" y="630" width="736" height="169"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Met de hulp van RSR blijft u mobiel. RSR is dé leverancier van hulpmiddelen in de regio Noordoost-Nederland. Gedegen kennis en jarenlange ervaring zit in ons DNA verweven en leidt tot het beste advies.   Wilt u mere weten over onze producten en diensten, kijk dan op www.rsr.nl of bezoek onze showrooms in Silvolde en Nieuwleusen. We zijn iedere werkdag geopend van 8.00 tot 17.00 uur. Hier kunt u diverse hulpmiddelen uitproberen en rustig bekijken wat goed bij uw situatie aansluit. Samen met u zoeken we naar hulpmiddelen dat bij u past. RSR maakt mensen mobiel.</string>
+                                <color key="textColor" red="0.48672950035202384" green="0.49185296877678197" blue="0.49185296877678197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_logo" translatesAutoresizingMaskIntoConstraints="NO" id="yeq-au-cOA">
+                                <rect key="frame" x="296" y="835" width="176" height="148"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="leading" secondItem="WPi-gN-0is" secondAttribute="leading" id="2Th-kz-Q0M"/>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="top" secondItem="WPi-gN-0is" secondAttribute="top" id="3Ob-An-tJR"/>
+                            <constraint firstItem="bDI-dc-iyc" firstAttribute="top" secondItem="s7j-zj-dzA" secondAttribute="bottom" constant="24" id="EQl-1f-FF6"/>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="width" secondItem="DqN-vN-J0Z" secondAttribute="width" id="L83-lX-HKb"/>
+                            <constraint firstItem="yeq-au-cOA" firstAttribute="centerX" secondItem="WPi-gN-0is" secondAttribute="centerX" id="NGn-OR-28F"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="top" secondItem="UAM-te-hDa" secondAttribute="bottom" id="T1D-29-SgT"/>
+                            <constraint firstItem="yeq-au-cOA" firstAttribute="top" secondItem="bDI-dc-iyc" secondAttribute="bottom" constant="36" id="TCF-B3-Vdf"/>
+                            <constraint firstItem="UAM-te-hDa" firstAttribute="trailing" secondItem="WPi-gN-0is" secondAttribute="trailing" id="b1I-2f-30Q"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="leading" secondItem="WPi-gN-0is" secondAttribute="leading" id="g6o-c0-j83"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="trailing" secondItem="WPi-gN-0is" secondAttribute="trailing" id="hkx-Bs-mSx"/>
+                            <constraint firstItem="bDI-dc-iyc" firstAttribute="leading" secondItem="WPi-gN-0is" secondAttribute="leading" constant="16" id="lAM-ti-hxU"/>
+                            <constraint firstItem="WPi-gN-0is" firstAttribute="trailing" secondItem="bDI-dc-iyc" secondAttribute="trailing" constant="16" id="wGa-or-CWl"/>
+                            <constraint firstItem="s7j-zj-dzA" firstAttribute="width" secondItem="DqN-vN-J0Z" secondAttribute="width" id="yxo-lw-WDw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WPi-gN-0is"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Over RSR" id="sli-gI-3kB"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="yeq-au-cOA" id="HgL-3p-5we"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rba-mh-OOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448.4375" y="622.8515625"/>
+        </scene>
+        <!--RSR Pechhulp-->
+        <scene sceneID="bYM-H6-hwO">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="OWV-Av-9K2" customClass="MapViewController" customModule="RSR_Pechhulp_Clone" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9IZ-ww-0jb" customClass="MapViewContoller" customModule="RSR-Pechhulp-Clone">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qv4-r4-E75">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <viewLayoutGuide key="safeArea" id="r5q-rd-kRn"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OWV-Av-9K2" id="Gu3-dY-zxl"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJE-7N-W8w">
+                                <rect key="frame" x="20" y="224" width="728" height="596"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="annuleren" translatesAutoresizingMaskIntoConstraints="NO" id="maP-MG-AC6">
+                                        <rect key="frame" x="0.0" y="14" width="89" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popup" translatesAutoresizingMaskIntoConstraints="NO" id="09U-cw-hpT">
+                                        <rect key="frame" x="0.0" y="36" width="343" height="203"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.82255256180000003" green="0.86074656250000003" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.82255256180000003" green="0.86074656250000003" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WEH-Nq-cOh">
+                                        <rect key="frame" x="40" y="90" width="263" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">Voor dit nummer betaalt uw
+gebruikelijke belkosten</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Belkosten" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNs-7Y-ap6">
+                                        <rect key="frame" x="99" y="51" width="145" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-ey-LKh">
+                                        <rect key="frame" x="0.0" y="14" width="89" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Annuleren">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonWithButton:" destination="OWV-Av-9K2" eventType="touchUpInside" id="Efa-fM-uIf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBF-h7-QeP">
+                                        <rect key="frame" x="22" y="161" width="297" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-130" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Bel nu" image="call" backgroundImage="btn_bell">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callPhoneNumberWithButton:" destination="OWV-Av-9K2" eventType="touchUpInside" id="41M-NT-5wK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="czv-lX-v4D">
+                                <rect key="frame" x="125" y="157" width="205" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="address" translatesAutoresizingMaskIntoConstraints="NO" id="Blx-EZ-5nZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Uw locatie:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tf6-F8-M6h">
+                                        <rect key="frame" x="54" y="12" width="97" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Onthound deze locatie voor het telefoongesprek" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CMM-TK-f1E">
+                                        <rect key="frame" x="4" y="83" width="198" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.20037665963172913" green="0.62821835279464722" blue="0.76918536424636841" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-jO-ybS">
+                                        <rect key="frame" x="28" y="32" width="149" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-Gj-r2y">
+                                <rect key="frame" x="16" y="575" width="343" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="titleEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-100" minY="0.0" maxX="0.0" maxY="2"/>
+                                <state key="normal" title="Bel RSR nu" image="phone" backgroundImage="btn_bell">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="callNowButtonWithButton:" destination="OWV-Av-9K2" eventType="touchUpInside" id="Abl-I6-QT8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7j-hv-S0s">
+                                <rect key="frame" x="0.0" y="846" width="768" height="178"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKK-pd-68g">
+                                        <rect key="frame" x="144" y="15" width="481.5" height="148"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neem contact op met RSR Nederland" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCm-6K-jNd">
+                                                <rect key="frame" x="0.0" y="0.0" width="481.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="srF-Dh-nRG">
+                                                <rect key="frame" x="135" y="64" width="212" height="36"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-Zf-EPb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="0dx-TK-VNa"/>
+                                                            <constraint firstAttribute="width" constant="32" id="4E9-hg-T7L"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="088-0016700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5g-aD-BbV">
+                                                        <rect key="frame" x="52" y="0.0" width="160" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="10D-oE-8cS"/>
+                                                            <constraint firstAttribute="height" constant="36" id="wpn-H2-c1k"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voor dit nummer betaalt u uw gebruikelijke belkosten." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-VX-fJ8">
+                                                <rect key="frame" x="25" y="112" width="432" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.99992364649999999" green="1" blue="0.99988287689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18029484152793884" green="0.57347702980041504" blue="0.73440736532211304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jKK-pd-68g" firstAttribute="centerY" secondItem="y7j-hv-S0s" secondAttribute="centerY" id="gkC-RY-lUz"/>
+                                    <constraint firstItem="jKK-pd-68g" firstAttribute="centerX" secondItem="y7j-hv-S0s" secondAttribute="centerX" id="jkw-w3-WPx"/>
+                                    <constraint firstAttribute="height" constant="178" id="ust-CX-5kD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qv4-r4-E75" firstAttribute="bottom" secondItem="CBJ-Lb-Q2n" secondAttribute="bottom" id="MXm-Uf-kbd"/>
+                            <constraint firstItem="y7j-hv-S0s" firstAttribute="leading" secondItem="CBJ-Lb-Q2n" secondAttribute="leading" id="PBP-7V-EUC"/>
+                            <constraint firstItem="jJE-7N-W8w" firstAttribute="centerX" secondItem="CBJ-Lb-Q2n" secondAttribute="centerX" id="XRb-2i-rAs"/>
+                            <constraint firstAttribute="bottom" secondItem="jJE-7N-W8w" secondAttribute="bottom" constant="204" id="YZd-a5-DSb"/>
+                            <constraint firstItem="jJE-7N-W8w" firstAttribute="top" secondItem="9IZ-ww-0jb" secondAttribute="top" constant="224" id="ann-zV-nYz"/>
+                            <constraint firstItem="Qv4-r4-E75" firstAttribute="trailing" secondItem="CBJ-Lb-Q2n" secondAttribute="trailing" id="biT-Ib-ZHA"/>
+                            <constraint firstItem="Qv4-r4-E75" firstAttribute="top" secondItem="CBJ-Lb-Q2n" secondAttribute="top" id="dki-Lc-mfe"/>
+                            <constraint firstItem="y7j-hv-S0s" firstAttribute="bottom" secondItem="CBJ-Lb-Q2n" secondAttribute="bottom" id="ibe-zs-7wf"/>
+                            <constraint firstItem="jJE-7N-W8w" firstAttribute="leading" secondItem="9IZ-ww-0jb" secondAttribute="leadingMargin" id="jho-6e-E6X"/>
+                            <constraint firstItem="Qv4-r4-E75" firstAttribute="leading" secondItem="CBJ-Lb-Q2n" secondAttribute="leading" id="qc9-2f-O7h"/>
+                            <constraint firstItem="y7j-hv-S0s" firstAttribute="trailing" secondItem="CBJ-Lb-Q2n" secondAttribute="trailing" id="rCO-zh-25z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CBJ-Lb-Q2n"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="RSR Pechhulp" id="abJ-Tn-LuD"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="gh5-jO-ybS" id="9Xe-Xo-IHF"/>
+                        <outlet property="bottomCallView" destination="y7j-hv-S0s" id="MKw-EE-1ax"/>
+                        <outlet property="callNowButton" destination="hY5-Gj-r2y" id="abr-hM-3KU"/>
+                        <outlet property="callNowView" destination="jJE-7N-W8w" id="oyu-g5-pdC"/>
+                        <outlet property="callNumberButton" destination="OBF-h7-QeP" id="gXS-3Q-WeB"/>
+                        <outlet property="cancelButton" destination="ogO-ey-LKh" id="Tc4-7Z-Oj1"/>
+                        <outlet property="customCallout" destination="czv-lX-v4D" id="SH6-r4-zRF"/>
+                        <outlet property="mapView" destination="Qv4-r4-E75" id="4wo-lU-xnI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mU7-Tv-tmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448.4375" y="-82.6171875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KQh-pq-M2J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cv8-x7-SJB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n3y-tB-U2T">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.18029484152793884" green="0.57347702980041504" blue="0.73440736532211304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.18029484152793884" green="0.57347702980041504" blue="0.73440736532211304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qDJ-hw-Gtb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdC-O0-2f0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="address" width="204" height="172"/>
+        <image name="annuleren" width="106" height="26"/>
+        <image name="attention" width="42" height="36"/>
+        <image name="background" width="768" height="1024"/>
+        <image name="btn_bell" width="216" height="48"/>
+        <image name="call" width="30" height="36"/>
+        <image name="info" width="30" height="30"/>
+        <image name="line" width="768" height="18"/>
+        <image name="over_img" width="768" height="524"/>
+        <image name="over_logo" width="176" height="148"/>
+        <image name="phone" width="32" height="36"/>
+        <image name="popup" width="284" height="184"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="euM-Wx-R7O"/>
+    </inferredMetricsTieBreakers>
+</document>

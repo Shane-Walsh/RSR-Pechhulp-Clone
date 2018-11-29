@@ -103,15 +103,11 @@
 		B2375927217687230072B6FB /* RSR-Pechhulp-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				B21B4C4021A8CA4100FF34F4 /* Reachability.swift */,
-				B2375928217687230072B6FB /* AppDelegate.swift */,
-				B237592A217687230072B6FB /* ViewController.swift */,
-				B237592C217687230072B6FB /* Main.storyboard */,
-				B23429152178E70900FB40C4 /* MapViewController.swift */,
-				B237592F217687230072B6FB /* Assets.xcassets */,
-				B2375931217687230072B6FB /* LaunchScreen.storyboard */,
 				B2375934217687230072B6FB /* Info.plist */,
-				B279D60C21AECA7A00DB47EE /* OverViewController.swift */,
+				B279D61121AF9A7E00DB47EE /* Resources */,
+				B279D61021AF9A1A00DB47EE /* Views */,
+				B279D60F21AF99B700DB47EE /* SupportingFiles */,
+				B279D60E21AF98B200DB47EE /* Controllers */,
 			);
 			path = "RSR-Pechhulp-Clone";
 			sourceTree = "<group>";
@@ -132,6 +128,42 @@
 				B237594A217687240072B6FB /* Info.plist */,
 			);
 			path = "RSR-Pechhulp-CloneUITests";
+			sourceTree = "<group>";
+		};
+		B279D60E21AF98B200DB47EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B23429152178E70900FB40C4 /* MapViewController.swift */,
+				B279D60C21AECA7A00DB47EE /* OverViewController.swift */,
+				B237592A217687230072B6FB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B279D60F21AF99B700DB47EE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B2375928217687230072B6FB /* AppDelegate.swift */,
+				B21B4C4021A8CA4100FF34F4 /* Reachability.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B279D61021AF9A1A00DB47EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B237592C217687230072B6FB /* Main.storyboard */,
+				B2375931217687230072B6FB /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B279D61121AF9A7E00DB47EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B237592F217687230072B6FB /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
