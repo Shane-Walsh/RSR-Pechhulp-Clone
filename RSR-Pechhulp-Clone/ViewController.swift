@@ -12,18 +12,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infoButton: UIBarButtonItem!
     
+    @IBOutlet weak var overButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+  
         // Set status bar color to white
         UIApplication.shared.statusBarStyle = .lightContent
         
-        
-        // If iPad hide info button on navbar
+        // If iPad - hide info button on navbar else hide over button on iPhone
          if UIDevice.current.userInterfaceIdiom == .pad {
             
             self.navigationItem.rightBarButtonItem = nil
-         }
+            
+         } else {
+            self.overButton.isHidden = true
+        }
+        
     }
 }
 

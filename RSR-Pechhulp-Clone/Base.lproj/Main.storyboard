@@ -26,29 +26,72 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cZF-NX-JPB">
                                 <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-pO-kHa">
-                                <rect key="frame" x="16" y="584" width="343" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <inset key="titleEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="-100" minY="0.0" maxX="0.0" maxY="2"/>
-                                <state key="normal" title="RSR Pechhulp" image="attention" backgroundImage="btn_bell">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OWV-Av-9K2" kind="show" id="n3C-4c-KpL"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-A7-8kT">
+                                <rect key="frame" x="212.5" y="828" width="343" height="146"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-pO-kHa">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="WBX-qo-idX"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="eF7-YN-rrY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-100" minY="0.0" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="RSR Pechhulp" image="attention" backgroundImage="btn_bell">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="OWV-Av-9K2" kind="show" id="n3C-4c-KpL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-X1-vnW">
+                                        <rect key="frame" x="0.0" y="83" width="343" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="4cI-5S-EQS"/>
+                                            <constraint firstAttribute="height" constant="63" id="pPD-fI-GFQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <inset key="titleEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-145" minY="0.0" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="Over RSR" image="info" backgroundImage="btn_bell">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="gl7-kq-7yf" kind="show" id="euM-Wx-R7O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="xAi-X1-vnW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="63" id="DTA-im-UZv">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
+                            </constraint>
                             <constraint firstItem="cZF-NX-JPB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JmX-W4-XOi"/>
+                            <constraint firstItem="aO3-A7-8kT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Psb-nz-fq1"/>
                             <constraint firstItem="cZF-NX-JPB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a54-HA-G8u"/>
                             <constraint firstItem="cZF-NX-JPB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bjE-dL-s3l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="IHU-pO-kHa" secondAttribute="bottom" id="nFl-cc-Bw1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                            </constraint>
                             <constraint firstItem="cZF-NX-JPB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w93-5F-Gvi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DTA-im-UZv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="DTA-im-UZv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="RSR Revalidatieservice" id="pqn-Nd-sov">
                         <barButtonItem key="backBarButtonItem" title="Terug" id="7Xd-uk-YIf">
@@ -65,6 +108,7 @@
                     <connections>
                         <outlet property="MapView" destination="Qv4-r4-E75" id="cLn-5H-MLi"/>
                         <outlet property="infoButton" destination="eX1-OQ-8hS" id="cW6-DR-yL4"/>
+                        <outlet property="overButton" destination="xAi-X1-vnW" id="8Kt-sE-dfo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -260,9 +304,17 @@ gebruikelijke belkosten</string>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-Zf-EPb">
                                                         <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="0dx-TK-VNa"/>
+                                                            <constraint firstAttribute="width" constant="32" id="4E9-hg-T7L"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="088-0016700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5g-aD-BbV">
                                                         <rect key="frame" x="52" y="0.0" width="160" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="10D-oE-8cS"/>
+                                                            <constraint firstAttribute="height" constant="36" id="wpn-H2-c1k"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" red="0.99992364645004272" green="1" blue="0.99988287687301636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -357,4 +409,7 @@ gebruikelijke belkosten</string>
         <image name="phone" width="32" height="36"/>
         <image name="popup" width="284" height="184"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="euM-Wx-R7O"/>
+    </inferredMetricsTieBreakers>
 </document>

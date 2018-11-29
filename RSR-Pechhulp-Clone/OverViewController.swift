@@ -16,10 +16,9 @@ class OverViewController: UIViewController {
         super.viewDidLoad()
 
         // If iPad hide info button on navbar
-        if UIDevice.current.userInterfaceIdiom == .pad {
+        if UIDevice.current.userInterfaceIdiom == .phone {
             
-            self.logoImageView = nil
-        }
-        
+            self.logoImageView.isHidden = true
+        }        
     }
 }
