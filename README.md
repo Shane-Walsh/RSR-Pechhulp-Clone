@@ -43,11 +43,11 @@ Map Screen iPad
 
 Main Landscape iPad
 
-<img src="https://github.com/Shane-Walsh/RSR-Pechhulp-Clone/blob/master/Screenshots/main-iPad-horiz.png" width="600" height="500">
+<img src="https://github.com/Shane-Walsh/RSR-Pechhulp-Clone/blob/master/Screenshots/main-iPad-horiz.png" width="650" height="500">
 
 
 Map Landscape iPad
 
-<img src="https://github.com/Shane-Walsh/RSR-Pechhulp-Clone/blob/master/Screenshots/%20map-iPad-horiz.png" width="600" height="500">
+<img src="https://github.com/Shane-Walsh/RSR-Pechhulp-Clone/blob/master/Screenshots/%20map-iPad-horiz.png" width="650" height="500">
 
 
