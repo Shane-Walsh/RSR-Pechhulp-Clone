@@ -28,9 +28,9 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var bottomCallView: UIView!
     
-    let locationManager = CLLocationManager()        // Access location manager API
+    let locationManager = CLLocationManager()
     
-    let mapMarker = MKPointAnnotation()              // Access annotation API
+    let mapMarker = MKPointAnnotation()
     
     let phoneNumber = "TEL://+31880016700"           // Set phone number for RSR
     
@@ -39,11 +39,11 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkConnectivity()                                             // Check network connection & GPS
+        checkConnectivity()
         
         //MARK: Initialise Views
         
-        if UIDevice.current.userInterfaceIdiom == .pad {                // If iPad - hide call now button, otherwise hide bottom call panel
+        if UIDevice.current.userInterfaceIdiom == .pad {
             
             callNowButton.isHidden = true
             
@@ -52,32 +52,32 @@ class MapViewController: UIViewController {
             bottomCallView.isHidden = true
         }
         
-        callNowView.isHidden = true                                     // Hide CallNow panel
-        customCallout.isHidden = true                                   // Hide CallOut bubble
+        callNowView.isHidden = true
+        customCallout.isHidden = true
         
-        mapView.delegate = self                                         // Implement mapView delegate protocol
+        mapView.delegate = self
         
-        locationManager.delegate = self                                 // Implement locationManager delegate protocol
+        locationManager.delegate = self
         
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest       // Set location accuracy
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
-        locationManager.requestWhenInUseAuthorization()                 // Ask permission to access user location
+        locationManager.requestWhenInUseAuthorization()
         
-        locationManager.startUpdatingLocation()                         // Get users current location
+        locationManager.startUpdatingLocation()
         
     }
     
     //MARK: Button Action
     @IBAction func callNowButton(button: UIButton) {
     
-        callNowView.isHidden = false                                    // Shows callNow panel on button tap
-        customCallout.isHidden = true                                    // Hide callout bubble
+        callNowView.isHidden = false
+        customCallout.isHidden = true
     }
     
     @IBAction func cancelButton(button: UIButton) {
         
-        customCallout.isHidden = false                                  // Callout bubble reappears if user cancels
-        callNowView.isHidden = true                                     // Hide CallNow panel
+        customCallout.isHidden = false
+        callNowView.isHidden = true
     }
     
     @IBAction func callPhoneNumber(button: UIButton) {
@@ -87,11 +87,8 @@ class MapViewController: UIViewController {
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     
-    
-    // Display user address in callout bubble
     func displayAddress(with location: CLLocation){
         
-        // Get user location corrdinates
         let address = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         
         
@@ -167,7 +164,6 @@ class MapViewController: UIViewController {
 
 extension MapViewController: CLLocationManagerDelegate {
     
-    // Respond to potential errors regarding location services
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error.localizedDescription)")
     }
@@ -193,14 +189,11 @@ extension MapViewController: CLLocationManagerDelegate {
             mapMarker.coordinate = location.coordinate
             mapView.addAnnotation(mapMarker)
             
-            self.displayAddress(with: location)                // Send coordinates to displayAddress method
-            locationManager.stopUpdatingLocation()             // Stop the generation of updates (user location)
+            self.displayAddress(with: location)
+            locationManager.stopUpdatingLocation()
         }
     }
 }
-
-
-//MARK: MapView Delegate
 
 extension MapViewController: MKMapViewDelegate {
    
@@ -210,7 +203,7 @@ extension MapViewController: MKMapViewDelegate {
         
         annotationView.image = UIImage(named: "marker")
         
-        customCallout.isHidden = false          // Show annotation
+        customCallout.isHidden = false          
         
         // Frame callout bubble above annotation
         customCallout.frame = CGRect(x: -(customCallout.frame.width  / 2), y: -(customCallout.frame.height), width: customCallout.frame.width, height: customCallout.frame.height)
