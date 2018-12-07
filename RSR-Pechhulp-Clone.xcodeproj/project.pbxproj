@@ -52,6 +52,7 @@
 		B2375944217687240072B6FB /* RSR-Pechhulp-CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSR-Pechhulp-CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2375948217687240072B6FB /* RSR_Pechhulp_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSR_Pechhulp_CloneUITests.swift; sourceTree = "<group>"; };
 		B237594A217687240072B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25F9ED921BB044900AF3919 /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = SOURCE_ROOT; };
 		B279D60C21AECA7A00DB47EE /* OverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +84,7 @@
 		B237591C217687230072B6FB = {
 			isa = PBXGroup;
 			children = (
+				B25F9ECD21BAFD1C00AF3919 /* Screenshots */,
 				B2375927217687230072B6FB /* RSR-Pechhulp-Clone */,
 				B237593C217687230072B6FB /* RSR-Pechhulp-CloneTests */,
 				B2375947217687240072B6FB /* RSR-Pechhulp-CloneUITests */,
@@ -103,6 +105,7 @@
 		B2375927217687230072B6FB /* RSR-Pechhulp-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				B25F9ED921BB044900AF3919 /* Screenshots */,
 				B2375934217687230072B6FB /* Info.plist */,
 				B279D61121AF9A7E00DB47EE /* Resources */,
 				B279D61021AF9A1A00DB47EE /* Views */,
@@ -128,6 +131,13 @@
 				B237594A217687240072B6FB /* Info.plist */,
 			);
 			path = "RSR-Pechhulp-CloneUITests";
+			sourceTree = "<group>";
+		};
+		B25F9ECD21BAFD1C00AF3919 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		B279D60E21AF98B200DB47EE /* Controllers */ = {
